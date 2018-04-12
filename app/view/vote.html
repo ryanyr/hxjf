@@ -21,8 +21,8 @@
       url: '/vote?_csrf=' + getCsrf(),
       data: $('form').serialize(),
       method: 'POST',
-      dataType: 'json',
-      contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+      // dataType: 'json',
+      contentType: 'application/x-www-form-urlencoded',// NEEDED, DON'T OMIT THIS (requires jQuery 1.6+),在无文件file时，用此类型，有file用false
       processData: false, // NEEDED, DON'T OMIT THIS
       success: function(result) {
         console.log(result);
